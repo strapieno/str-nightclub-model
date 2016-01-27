@@ -1,1 +1,1 @@
-# Strapieno user model
+# Strapieno nightclub model
