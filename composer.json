@@ -13,7 +13,8 @@
     "matryoshka-model/matryoshka": "0.8.*@dev",
     "matryoshka-model/mongo-wrapper": "0.8.*@dev",
     "matryoshka-model/zf2-matryoshka-module": "0.8.*@dev",
-    "strapieno/str-utils" : "dev-develop"
+    "strapieno/str-user-model",
+    "strapieno/str-utils": "dev-develop"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.7",
@@ -29,6 +30,10 @@
     ]
   },
   "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:strapieno/str-user-model"
+    },
     {
       "type": "vcs",
       "url": "git@github.com:strapieno/str-utils.git"
