@@ -1,33 +1,13 @@
 <?php
 return [
     'service_manager' => [
-        'abstract_factories' => [
-            'Matryoshka\Model\Wrapper\Mongo\Service\MongoDbAbstractServiceFactory',
-            'Matryoshka\Model\Wrapper\Mongo\Service\MongoCollectionAbstractServiceFactory'
-        ],
         'invokables' => [
             'Strapieno\NightClub\Model\Criteria\Mongo\NightClubMongoCollectionCriteria'
-                => 'Strapieno\NightClub\Model\Criteria\Mongo\NightClubMongoCollectionCriteria',
-            'Matryoshka\Model\Wrapper\Mongo\Criteria\Isolated\ActiveRecordCriteria'
-                => 'Matryoshka\Model\Wrapper\Mongo\Criteria\Isolated\ActiveRecordCriteria',
-            'Matryoshka\Model\Wrapper\Mongo\Criteria\ActiveRecord\ActiveRecordCriteria'
-                => 'Matryoshka\Model\Wrapper\Mongo\Criteria\ActiveRecord\ActiveRecordCriteria',
-            'Matryoshka\Model\Wrapper\Mongo\ResultSet\HydratingResultSet' =>
-                'Matryoshka\Model\Wrapper\Mongo\ResultSet\HydratingResultSet'
+                => 'Strapieno\NightClub\Model\Criteria\Mongo\NightClubMongoCollectionCriteria'
         ],
         'aliases' => [
             'Strapieno\NightClub\Model\Criteria\NightClubCollectionCriteria'
-                => 'Strapieno\NightClub\Model\Criteria\Mongo\NightClubMongoCollectionCriteria',
-            'Strapieno\Model\Criteria\IsolatedActiveRecordCriteria'
-                => 'Matryoshka\Model\Wrapper\Mongo\Criteria\Isolated\ActiveRecordCriteria',
-                'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
-                => 'Matryoshka\Model\Wrapper\Mongo\Criteria\ActiveRecord\ActiveRecordCriteria',
-            'Strapieno\Model\ResultSet\HydratingResultSet'
-                => 'Matryoshka\Model\Wrapper\Mongo\ResultSet\HydratingResultSet',
-        ],
-        'shared' => [
-            // Do not share instance of ResultSet to avoid collisions on prototype strategies,
-            'Matryoshka\Model\Wrapper\Mongo\ResultSet\HydratingResultSet' => false,
+                => 'Strapieno\NightClub\Model\Criteria\Mongo\NightClubMongoCollectionCriteria'
         ]
     ],
     'mongodb' => [
@@ -38,12 +18,16 @@ return [
     'mongocollection' => [
         'DataGateway\Mongo\NightClub' => [
             'database' => 'Mongo\Db',
-            'collection' => 'user',
+            'collection' => 'nightclub',
         ],
     ],
     'matryoshka-objects' => [
         'NightClub' => [
             'type' => 'Strapieno\NightClub\Model\Entity\NightClubEntity',
+            'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
+        ],
+        'ClubPrive' => [
+            'type' => 'Strapieno\NightClub\Model\Entity\ClubPriveEntity',
             'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
         ],
     ],
@@ -54,6 +38,7 @@ return [
             'object' => 'NightClub',
             'resultset' => 'Strapieno\Model\ResultSet\HydratingResultSet',
             'paginator_criteria' => 'Strapieno\NightClub\Model\Criteria\NightClubCollectionCriteria',
+            'prototype_strategy' => 'Matryoshka\Model\Object\PrototypeStrategy\ServiceLocatorStrategy',
             'hydrator' => 'Strapieno\NightClub\Model\Hydrator\NightClubModelMongoHydrator',
             'listeners' => [
                 'Strapieno\Utils\Model\Listener\DateAwareListener',
