@@ -1,5 +1,5 @@
 <?php
-namespaceStrapieno\NightClub\Model;
+namespace Strapieno\NightClub\Model;
 
 /**
  * Interface NightClubModelAwareInterface
