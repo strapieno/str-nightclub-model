@@ -16,7 +16,6 @@ use Zend\Stdlib\Hydrator\HydratorAwareTrait;
 class NightClubEntity extends AbstractActiveRecord implements NightClubInterface
 {
     use TypeAwareTrait;
-    use HydratorAwareTrait;
     use DateHistoryAwareTrait;
     use PlaceTrait;
 }

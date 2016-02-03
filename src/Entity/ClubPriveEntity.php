@@ -16,7 +16,6 @@ use Zend\Stdlib\Hydrator\HydratorAwareTrait;
 class ClubPriveEntity extends AbstractActiveRecord implements ClubPriveInterface
 {
     use TypeAwareTrait;
-    use HydratorAwareTrait;
     use DateHistoryAwareTrait;
     use PlaceTrait;
 }
