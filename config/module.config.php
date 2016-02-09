@@ -25,7 +25,7 @@ return [
         'Place' => [
             'type' => 'Strapieno\Utils\Model\Entity\Place\PlaceEntity',
             'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
-        ]
+        ],
         'NightClub' => [
             'type' => 'Strapieno\NightClub\Model\Entity\NightClubEntity',
             'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
