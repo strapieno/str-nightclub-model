@@ -13,11 +13,7 @@ use Zend\Stdlib\Hydrator\HydratorAwareInterface;
  * Interface NightClubInterface
  */
 interface NightClubInterface extends
-    PlaceInterface,
-    EntityInterface,
-    DateHistoryAwareInterface,
-    HydratorAwareInterface,
-    TypeAwareInterface
+    PlaceInterface
 {
 
 }

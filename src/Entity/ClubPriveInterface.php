@@ -11,11 +11,7 @@ use Zend\Stdlib\Hydrator\HydratorAwareInterface;
  * Interface ClubPriveInterface
  */
 interface ClubPriveInterface extends
-    PlaceInterface,
-    EntityInterface,
-    DateHistoryAwareInterface,
-    HydratorAwareInterface,
-    TypeAwareInterface
+    PlaceInterface
 {
 
 }

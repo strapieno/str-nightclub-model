@@ -22,6 +22,10 @@ return [
         ],
     ],
     'matryoshka-objects' => [
+        'Place' => [
+            'type' => 'Strapieno\Utils\Model\Entity\Place\PlaceEntity',
+            'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
+        ]
         'NightClub' => [
             'type' => 'Strapieno\NightClub\Model\Entity\NightClubEntity',
             'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
@@ -35,7 +39,7 @@ return [
         'Strapieno\NightClub\Model\NightClubModelService' => [
             'datagateway' => 'DataGateway\Mongo\NightClub',
             'type' => 'Strapieno\NightClub\Model\NightClubModelService',
-            'object' => 'NightClub',
+            'object' => 'Place',
             'resultset' => 'Strapieno\Model\ResultSet\HydratingResultSet',
             'paginator_criteria' => 'Strapieno\NightClub\Model\Criteria\NightClubCollectionCriteria',
             'prototype_strategy' => 'Matryoshka\Model\Object\PrototypeStrategy\ServiceLocatorStrategy',
