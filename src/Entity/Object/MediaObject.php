@@ -4,10 +4,10 @@ namespace Strapieno\NightClub\Model\Entity\Object;
 use Strapieno\Utils\DataStructure\RefIdentityInteface;
 use Strapieno\Utils\Model\Object\AbstractObject;
 use Strapieno\Utils\Model\Object\Media\MediaInterface;
-use Strapieno\Utils\Model\Object\ObjectInterface;
 use Strapieno\Utils\Model\Object\Media\MediaTrait;
-use  Zend\Stdlib\Hydrator\Filter\MethodMatchFilter;
+use Strapieno\Utils\Model\Object\ObjectInterface;
 use Zend\Stdlib\Hydrator\Filter\FilterComposite;
+use Zend\Stdlib\Hydrator\Filter\MethodMatchFilter;
 
 /**
  * Class MediaObject
