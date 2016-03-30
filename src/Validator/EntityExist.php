@@ -23,7 +23,7 @@ class EntityExist extends AbstractEntityExist implements ValidatorInterface, Nig
         self::NOT_MONGO_ID  => 'Identifier format not valid'
     ];
 
-    protected function getModelServiceMethod()
+    protected function getModelMethodService()
     {
         return EntityExist::GETTER_METHOD_NAME;
     }
