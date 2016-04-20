@@ -49,7 +49,7 @@ return [
             ],
         ],
     ],
-    'input_filter_specs' => [
+    'strapieno_input_filter_specs' => [
         'Strapieno\NightClub\Model\InputFilter\DefaultPostalAddressInputFilter' => [
             'address_locality' => [
                 'name' => 'address_locality',
