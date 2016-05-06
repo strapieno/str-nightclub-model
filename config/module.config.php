@@ -198,8 +198,27 @@ return [
                     'stringtrim' =>  [
                         'name' => 'stringtrim',
                     ]
+                ],
+                'validators' => [
+                    'longitude' => [
+                        'name' => 'between',
+                    ]
                 ]
-                // TODO add validator
+            ],
+            'type' => [
+                'require' => false,
+                'allow_empty' => true,
+                'name' => 'type',
+                'filters' => [
+                    'stringtrim' =>  [
+                        'name' => 'stringtrim',
+                    ]
+                ],
+                'validator' => [
+                    'PlaceTypesValidator' => [
+                        'name' => 'PlaceTypesValidator'
+                    ]
+                ]
             ],
             'geo_coordinate' => [
                 'name' => 'geo_coordinate',
