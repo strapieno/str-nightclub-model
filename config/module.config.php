@@ -49,9 +49,16 @@ return [
             ],
         ],
     ],
+    'strapieno-array-validators' => [
+        'PlaceTypesValidator' => [
+            'name_key_array_config' => 'PlacesTypes'
+        ]
+    ],
     'strapieno_input_filter_specs' => [
         'Strapieno\NightClub\Model\InputFilter\DefaultPostalAddressInputFilter' => [
             'address_locality' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'address_locality',
                 'filters' => [
                     'stringtrim' =>  [
@@ -61,6 +68,8 @@ return [
                 // TODO add validator
             ],
             'address_region' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'address_region',
                 'filters' => [
                     'stringtrim' =>  [
@@ -71,6 +80,8 @@ return [
             ],
 
             'postal_code' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'postal_code',
                 'filters' => [
                     'stringtrim' =>  [
@@ -81,6 +92,8 @@ return [
             ],
 
             'street_address' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'street_address',
                 'filters' => [
                     'stringtrim' =>  [
@@ -91,6 +104,8 @@ return [
             ],
 
             'address_country' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'address_country',
                 'filters' => [
                     'stringtrim' =>  [
@@ -102,6 +117,8 @@ return [
         ],
         'Strapieno\NightClub\Model\InputFilter\DefaultGeoCoordiateInputFilter' => [
             'latitude' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'latitude',
                 'filters' => [
                     'stringtrim' =>  [
@@ -115,6 +132,8 @@ return [
                 ]
             ],
             'longitude' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'longitude',
                 'filters' => [
                     'stringtrim' =>  [
@@ -128,6 +147,8 @@ return [
                 ]
             ],
             'elevation' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'elevation',
                 'filters' => [
                     'stringtrim' =>  [
@@ -148,6 +169,8 @@ return [
         ],
         'Strapieno\NightClub\Model\InputFilter\DefaultInputFilter' => [
             'fax_number' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'fax_number',
                 'filters' => [
                     'stringtrim' =>  [
@@ -157,6 +180,8 @@ return [
                 // TODO add validator
             ],
             'telephone' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'telephone',
                 'filters' => [
                     'stringtrim' =>  [
@@ -166,6 +191,8 @@ return [
                 // TODO add validator
             ],
             'name' => [
+                'require' => false,
+                'allow_empty' => true,
                 'name' => 'name',
                 'filters' => [
                     'stringtrim' =>  [
