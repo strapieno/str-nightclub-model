@@ -198,11 +198,6 @@ return [
                     'stringtrim' =>  [
                         'name' => 'stringtrim',
                     ]
-                ],
-                'validators' => [
-                    'longitude' => [
-                        'name' => 'between',
-                    ]
                 ]
             ],
             'type' => [
@@ -214,7 +209,7 @@ return [
                         'name' => 'stringtrim',
                     ]
                 ],
-                'validator' => [
+                'validators' => [
                     'PlaceTypesValidator' => [
                         'name' => 'PlaceTypesValidator'
                     ]
