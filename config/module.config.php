@@ -107,8 +107,12 @@ return [
                     'stringtrim' =>  [
                         'name' => 'stringtrim',
                     ]
+                ],
+                'validators' => [
+                    'latitude' => [
+                        'name' => 'latitude'
+                    ]
                 ]
-                // TODO add validator
             ],
             'longitude' => [
                 'name' => 'longitude',
@@ -116,8 +120,12 @@ return [
                     'stringtrim' =>  [
                         'name' => 'stringtrim',
                     ]
+                ],
+                'validators' => [
+                    'longitude' => [
+                        'name' => 'longitude'
+                    ]
                 ]
-                // TODO add validator
             ],
             'elevation' => [
                 'name' => 'elevation',
@@ -125,8 +133,17 @@ return [
                     'stringtrim' =>  [
                         'name' => 'stringtrim',
                     ]
+                ],
+                'validators' => [
+                    'longitude' => [
+                        'name' => 'between',
+                        'options' => [
+                            'min' => -10994, // Challenger Abyss
+                            'max' => 8848 // Everest
+                        ],
+                    ]
                 ]
-                // TODO add validator
+
             ],
         ],
         'Strapieno\NightClub\Model\InputFilter\DefaultInputFilter' => [
