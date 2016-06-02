@@ -4,7 +4,7 @@ namespace Strapieno\NightClub\Model;
 use Strapieno\Utils\Initializer\AbstractModelServiceInitializer;
 
 /**
- * Class NightClubModelInizializer
+ * Class NightClubModelInitializer
  */
 class NightClubModelInitializer extends AbstractModelServiceInitializer
 {
