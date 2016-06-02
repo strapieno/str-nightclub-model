@@ -1,12 +1,12 @@
 <?php
 namespace Strapieno\NightClub\Model;
 
-use Strapieno\Utils\Inizilizer\AbstractModelServiceInizilizer;
+use Strapieno\Utils\Initializer\AbstractModelServiceInitializer;
 
 /**
  * Class NightClubModelInizializer
  */
-class NightClubModelInizializer extends AbstractModelServiceInizilizer
+class NightClubModelInitializer extends AbstractModelServiceInitializer
 {
     const SERVICE_NAME = NightClubModelService::class;
     const INSTANCE_CLASS = NightClubModelAwareInterface::class;
