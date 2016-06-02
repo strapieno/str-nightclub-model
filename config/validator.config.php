@@ -1,7 +1,7 @@
 <?php
 return [
     'initializers' => [
-        'Strapieno\NightClub\Model\NightClubModelInizializer'
+        'Strapieno\NightClub\Model\NightClubModelInitializer'
     ],
     'invokables' => [
         'Strapieno\NightClub\Model\Validator\EntityExist' => 'Strapieno\NightClub\Model\Validator\EntityExist',

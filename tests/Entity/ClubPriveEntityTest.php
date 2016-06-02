@@ -2,9 +2,7 @@
 namespace Strapieno\NightClub\ModelTest\Entity;
 
 use Strapieno\NightClub\Model\Entity\ClubPriveEntity;
-use Strapieno\NightClub\Model\Entity\NightClubEntity;
 use Strapieno\NightClub\Model\Entity\NightClubInterface;
-
 
 /**
  * Class NightClubEntityTest
