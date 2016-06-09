@@ -168,6 +168,7 @@ return [
             ],
         ],
         'Strapieno\NightClub\Model\InputFilter\DefaultInputFilter' => [
+            // TODO wrong shold stay in api module
             'user_id' => [
                 'require' => false,
                 'allow_empty' => true,
