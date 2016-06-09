@@ -168,6 +168,17 @@ return [
             ],
         ],
         'Strapieno\NightClub\Model\InputFilter\DefaultInputFilter' => [
+            'user_id' => [
+                'require' => false,
+                'allow_empty' => true,
+                'name' => 'user_id',
+                'validators' => [
+                    'user-entityexist' => [
+                        'name' => 'user-entityexist'
+                    ]
+                ]
+
+            ],
             'fax_number' => [
                 'require' => false,
                 'allow_empty' => true,

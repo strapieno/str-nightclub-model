@@ -7,8 +7,4 @@ use Strapieno\Utils\Model\Object\Place\PlaceInterface;
 /**
  * Interface NightClubInterface
  */
-interface NightClubInterface extends
-    PlaceInterface
-{
-
-}
+interface NightClubInterface extends PlaceInterface { }
